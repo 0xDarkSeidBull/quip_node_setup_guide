@@ -1,4 +1,4 @@
-# Quip Network — CPU Node Setup Guide (Ubuntu VPS)
+# Quip Network : CPU Node Setup Guide (Ubuntu VPS)
 <img width="1919" height="779" alt="image" src="https://github.com/user-attachments/assets/839fcc44-1686-443c-a836-4e20900ac099" />
 
 > **Deadline:** Get your node running before **April 15, 2026** to qualify for the initial quest drop.
