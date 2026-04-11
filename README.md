@@ -15,7 +15,7 @@
 
 ---
 
-## Step 1 — Install Docker
+## Step 1 : Install Docker
 
 ```bash
 sudo apt update && sudo apt upgrade -y
@@ -33,7 +33,7 @@ docker compose version
 
 ---
 
-## Step 2 — Open Ports
+## Step 2 : Open Ports
 
 ```bash
 ufw allow 20049/udp
@@ -42,7 +42,7 @@ ufw allow 20049/tcp
 
 ---
 
-## Step 3 — Clone the Repo
+## Step 3 : Clone the Repo
 
 You need a GitLab Personal Access Token with `read_repository` scope.
 Generate one at: https://gitlab.com/-/profile/personal_access_tokens
@@ -54,7 +54,7 @@ cd nodes.quip.network
 
 ---
 
-## Step 4 — Configure the Node
+## Step 4 : Configure the Node
 
 ```bash
 cp data/config.cpu.toml data/config.toml
@@ -79,7 +79,7 @@ auto_mine = true
 tofu = true
 ```
 
-**Node name format is important** — use `Handle - 0xWallet` (space-dash-space) exactly as shown. This is how Quip maps your node to your wallet for rewards.
+**Node name format is important** : use `Handle - 0xWallet` (space-dash-space) exactly as shown. This is how Quip maps your node to your wallet for rewards.
 
 Example:
 ```toml
@@ -88,14 +88,14 @@ node_name = "0xDarkSeidBull - 0x3bc6348e1e569e97bd8247b093475a4ac22b9fd4"
 
 > **Which wallet to use?** Use the same EVM wallet address you connected on:
 > - Quest dashboard: [https://quest.quip.network/airdrop](https://quest.quip.network/airdrop?referral_code=DARKSEID) 
-> ## Bonus — Genesis Block Inscription
+> ## Bonus : Genesis Block Inscription
 Leave your mark on the Quip Network genesis block:
 > - Quip account: [https://account.quip.network](https://account.quip.network/?ref=0x3bc6348e1e569e97bd8247b093475a4ac22b9fd4)
 > On the account page, your connected address shows under **Your Accounts**. Use that exact address in your `node_name`. Keeping the same wallet across node, quest site, and account page ensures rewards are mapped correctly.
 
 ---
 
-## Step 5 — Configure Environment
+## Step 5 : Configure Environment
 
 ```bash
 cp env.example .env
@@ -113,7 +113,7 @@ If port 80 or 443 is already in use on your VPS (e.g. nginx running), comment th
 
 ---
 
-## Step 6 — Start the Node
+## Step 6 : Start the Node
 
 ```bash
 docker compose --profile cpu up -d
@@ -136,7 +136,7 @@ QUIC connection established to nodes.quip.network:20049
 
 ---
 
-## Step 7 — Enable Auto-Updates
+## Step 7 : Enable Auto-Updates
 
 Install an hourly cron job that pulls the latest image automatically:
 
