@@ -147,7 +147,8 @@ if [[ -d "$INSTALL_DIR" ]]; then
 fi
 
 if [[ ! -d "$INSTALL_DIR" ]]; then
-  git clone "https://oauth2:${GITLAB_TOKEN}@gitlab.com/quip.network/nodes.quip.network.git" "$INSTALL_DIR" \
+  ENCODED_TOKEN=$(python3 -c "import urllib.parse; print(urllib.parse.quote('${GITLAB_TOKEN}', safe=''))")
+git clone "https://oauth2:${ENCODED_TOKEN}@gitlab.com/quip.network/nodes.quip.network.git" "$INSTALL_DIR" \
     || error "Clone failed — GitLab token ya URL check karo"
   ok "Repo cloned: $INSTALL_DIR"
 else
